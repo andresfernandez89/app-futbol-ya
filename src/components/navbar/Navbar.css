@@ -1,7 +1,6 @@
 .app-navbar{
   width: 100%;
   position: fixed;
-  z-index: 1;
   background-color: #1A1A2E;
   color: #F9F3EE  !important;
 }
@@ -36,4 +35,35 @@
   border-radius: 0px !important;
   border-style: outset!important;
   color: #F9F3EE !important;
+}
+
+.mobileVisible {
+  display: none;
+  height: 100%!important;
+}
+
+.mobileHidden {
+  display: block;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  a{
+    font-weight: bold;
+  }
+  .mobileVisible {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+
+  .ant-drawer-body{
+    padding-top: 5px !important;
+    right: 0;
+  }
+  
+  .mobileHidden {
+    display: none;
+  }
 }

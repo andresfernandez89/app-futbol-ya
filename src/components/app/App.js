@@ -2,19 +2,18 @@ import Navbar from "../navbar/Navbar";
 import {Layout} from "antd";
 import "./App.css";
 import {DribbbleOutlined} from "@ant-design/icons";
-const {Content, Footer} = Layout;
+const {Content} = Layout;
 
 const App = () => {
 	return (
-		<>
+		<div className="container">
 			<Navbar />
-			<DribbbleOutlined className="main-icon" />
-			<h1>FUTBOL YA</h1>
-			<Content style={{minHeight: 500}}>Content</Content>
-			<Footer style={{alignItems: "center", alignContent: "center", textAlign: "center"}}>
-				© 2022 Copyright - futbolya.com
-			</Footer>
-		</>
+			<Content className="app-container">
+				<h1>FUTBOL YA</h1>
+				<DribbbleOutlined className="main-icon" />
+			</Content>
+			<footer className="footer">© 2022 Copyright - futbolya.com</footer>
+		</div>
 	);
 };
 
