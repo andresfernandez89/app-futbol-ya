@@ -1,0 +1,38 @@
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: #c6dce4;
+  padding: 10px 0;
+  align-self: flex-end;
+  border-bottom: 0;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-bottom: 0;
+}
+
+.logo {
+  width: 128px;
+  height: 128px;
+  margin-top: 30px;
+  z-index: 99;
+}
+
+.content {
+  margin-top: 35px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    margin-top: 0;
+  }
+
+  .logo {
+    width: 76px;
+    height: 76px;
+    margin-top: 20px;
+  }
+}
