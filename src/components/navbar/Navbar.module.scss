@@ -1,75 +1,69 @@
-.btnAuth {
-  border-radius: 0px;
-  border-style: outset;
-  color: #f9f3ee;
-}
-
 .mobileDrawer {
-  :global(.ant-drawer-body) {
-    @media only screen and (max-width: 768px) {
-      padding-top: 5px;
-      right: 0;
-    }
-    .btnAuth,
-    .btnServices {
-      width: 100%;
-    }
-    svg {
-      font-size: 42px;
-      margin-bottom: 20px;
-      right: 0;
-    }
-  }
+	:global(.ant-drawer-body) {
+		@media only screen and (max-width: 768px) {
+			padding-top: 5px;
+			right: 0;
+		}
+		.btnAuth,
+		.btnServices {
+			width: 100%;
+			a {
+				@media only screen and (max-width: 768px) {
+					font-weight: bold;
+				}
+			}
+		}
+		.btnAuth {
+			border-style: outset;
+		}
+		.svgClose {
+			font-size: 42px;
+			margin-bottom: 20px;
+			right: 0;
+		}
+	}
 }
 
 .mobile {
-  display: none;
-  height: 100%;
-  @media only screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    right: 0;
-  }
-  &:first-child {
-    font-size: 22px;
-    height: auto;
-  }
-  a {
-    button {
-      @media only screen and (max-width: 768px) {
-        font-weight: bold;
-      }
-    }
-  }
+	display: none;
+	height: 100%;
+	@media only screen and (max-width: 768px) {
+		display: block;
+		position: absolute;
+		right: 0;
+	}
 }
 .mobileHidden {
-  width: 100%;
-  position: fixed;
-  background-color: #1a1a2e;
-  color: #f9f3ee;
-  display: flex;
-  justify-content: flex-end;
+	width: 100%;
+	position: fixed;
+	background-color: #1a1a2e;
+	color: #f9f3ee;
+	display: flex;
+	justify-content: flex-end;
 
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-  button {
-    color: #f9f3ee;
-    font-weight: bold;
-    height: 100%;
-  }
-
-  .btnServices {
-    &:focus {
-      background-color: #816797;
-      color: #1a1a2e;
-      border-radius: 10px;
-      padding: 5px 10px 2px 10px;
-
-      color: #f9f3ee;
-    }
-    &:hover {
-      background-color: #816797;
-    }
-  }
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+	.btnAuth,
+	.btnServices {
+		color: #f9f3ee;
+		font-weight: bold;
+		height: 100%;
+	}
+	.btnAuth {
+		border-radius: 0px;
+		border-style: outset;
+	}
+	.btnServices {
+		&:hover {
+			background-color: #816797;
+		}
+		&:focus {
+			/* no me toma al hacer focus */
+			background-color: #816797;
+			border-radius: 10px;
+			padding: 5px 10px 2px 10px;
+			color: #f9f3ee;
+		}
+	}
 }
