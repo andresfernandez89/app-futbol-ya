@@ -1,0 +1,46 @@
+{
+	"country": [
+		{
+			"id": "1",
+			"name": "Argentina",
+			"leagues": [
+				{
+					"id": "1",
+					"name": "Primera Division Argentina",
+					"teams": [
+						{"name": "Racing Club", "players": [{"name": "Dario Copetti"}]},
+						{"name": "Boca Juniors", "players": [{"name": "Dario Benedetto"}]},
+						{"name": "River Plate", "players": [{"name": "Enzo Fernandez"}]},
+						{"name": "Independiente", "players": [{"name": "Braian Fernandez"}]}
+					]
+				},
+				{
+					"id": "2",
+					"name": "Segunda Division Argentina",
+					"teams": [
+						{"name": "Alvarado", "players": [{"name": "Victor Perez"}]},
+						{"name": "Instituto", "players": [{"name": "Sergio Urrutia"}]},
+						{"name": "Almagro", "players": [{"name": "Pedro Suarez"}]},
+						{"name": "Chacarita", "players": [{"name": "Lucas Ledesma"}]}
+					]
+				}
+			]
+		},
+		{
+			"id": "2",
+			"name": "Copa del Mundo",
+			"leagues": [
+				{
+					"id": "1",
+					"name": "Copa del Mundo",
+					"teams": [
+						{"name": "Argentina", "players": [{"name": "Damian Arruabarrena"}]},
+						{"name": "Brasil", "players": [{"name": "Milton Caceres"}]},
+						{"name": "España", "players": [{"name": "Luis Bauza"}]},
+						{"name": "Francia", "players": [{"name": "Felipe Almiron"}]}
+					]
+				}
+			]
+		}
+	]
+}
