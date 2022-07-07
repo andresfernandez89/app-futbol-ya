@@ -1,14 +1,10 @@
 @use "./assets/sass/variables" as *;
 
 body {
-  margin: 0;
-  font-family: $font-stack;
+	margin: 0;
+	font-family: $font-stack;
 }
 
-.mainBg {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  opacity: 0.55;
+#root {
+	height: 100%;
 }
