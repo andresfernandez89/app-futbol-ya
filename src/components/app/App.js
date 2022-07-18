@@ -1,18 +1,18 @@
 import Navbar from "../navbar/Navbar";
 import {Layout} from "antd";
-import "./App.css";
-import {DribbbleOutlined} from "@ant-design/icons";
+import mainLogo from "../../assets/icons/main-logo.png";
+import styles from "./App.module.scss";
+import data from "../../db/mockData.json";
 const {Content} = Layout;
 
 const App = () => {
 	return (
-		<div className="container">
-			<Navbar />
-			<Content className="app-container">
-				<h1>FUTBOL YA</h1>
-				<DribbbleOutlined className="main-icon" />
+		<div className={styles.mainContainer}>
+			<Navbar data={data} />
+			<Content className={styles.content}>
+				<img className={styles.logo} src={mainLogo} alt="logo principal" />
 			</Content>
-			<footer className="footer">© 2022 Copyright - futbolya.com</footer>
+			<footer className={styles.footer}>© 2022 Copyright - futbolya.com</footer>
 		</div>
 	);
 };

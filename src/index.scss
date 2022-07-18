@@ -1,0 +1,10 @@
+@use "./assets/sass/variables" as *;
+
+body {
+	margin: 0;
+	font-family: $font-stack;
+}
+
+#root {
+	height: 100%;
+}
