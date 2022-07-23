@@ -3,11 +3,13 @@ import Standings from "../standings/Standings";
 
 const DetailContainer = () => {
 	return (
-		<Row>
-			<Col md={24} lg={8}>
+		<Row justify="space-evenly">
+			<Col md={12} lg={8}>
 				<Standings />
 			</Col>
-			<Col md={24} lg={16}></Col>
+			<Col md={12} lg={14}>
+				Fixture
+			</Col>
 		</Row>
 	);
 };

@@ -15,6 +15,7 @@ const columns = [
 	{
 		title: "Club",
 		dataIndex: "club",
+		render: (club) => <a href="index.html">{club}</a>,
 	},
 	{
 		title: "Pts",
@@ -51,10 +52,9 @@ const columns = [
 ];
 
 const Standings = () => (
-	<div className="standingsContainer">
-		<h4>Tabla de Posiciones</h4>
+	<div className={styles.standingsContainer}>
+		<h4>TABLA DE POSICIONES</h4>
 		<Table columns={columns} dataSource={dataStanding.standings} size="small" pagination={false} />
 	</div>
 );
-
 export default Standings;
