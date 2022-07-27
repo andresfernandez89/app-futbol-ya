@@ -1,17 +1,14 @@
 .standingsContainer {
-	:global(.ant-table) table {
-		:global(.ant-table-thead) {
-			& > tr {
-				& > th {
-					text-align: center;
-				}
-			}
-		}
-		:global(.ant-table-row) {
+	:global(.ant-table.ant-table-small .ant-table-tbody) {
+		> tr > td:global(.ant-table-cell) {
 			text-align: center;
-			td:global(.ant-table-cell) {
-				padding: 2px 8px 2px 8px;
-			}
+			padding: 1px 1px;
+		}
+	}
+	:global(.ant-table.ant-table-small .ant-table-thead) {
+		> tr > th:global(.ant-table-cell) {
+			text-align: center;
+			padding: 1px 1px;
 		}
 	}
 
@@ -19,6 +16,7 @@
 		width: 24px;
 		height: 24px;
 	}
+
 	h4 {
 		text-align: center;
 		font-weight: bold;

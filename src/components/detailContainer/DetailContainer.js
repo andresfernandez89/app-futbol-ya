@@ -4,10 +4,10 @@ import Standings from "../standings/Standings";
 const DetailContainer = () => {
 	return (
 		<Row justify="space-evenly">
-			<Col md={12} lg={8}>
+			<Col xs={22} sm={22} md={10} lg={8}>
 				<Standings />
 			</Col>
-			<Col md={12} lg={14}>
+			<Col xs={22} sm={22} md={12} lg={14}>
 				Fixture
 			</Col>
 		</Row>
