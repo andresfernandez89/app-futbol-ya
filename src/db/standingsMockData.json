@@ -1,0 +1,59 @@
+{
+	"id": 1,
+	"league": "Primera Division Argentina",
+	"season": 2022,
+	"standings": [
+		{
+			"rank": 1,
+			"logo": "https://statics-files.tycsports.com/escudos/16.png",
+			"club": "Racing Club",
+			"points": "15",
+			"pj": "5",
+			"pg": "5",
+			"pe": "0",
+			"pp": "0",
+			"gf": "14",
+			"gc": "0",
+			"dif": "+14"
+		},
+		{
+			"rank": 2,
+			"club": "Aldosivi",
+			"logo": "https://statics-files.tycsports.com/escudos/122.png",
+			"points": "13",
+			"pj": "5",
+			"pg": "4",
+			"pe": "1",
+			"pp": "0",
+			"gf": "14",
+			"gc": "3",
+			"dif": "+11"
+		},
+		{
+			"rank": 3,
+			"club": "Talleres",
+			"logo": "https://statics-files.tycsports.com/escudos/135.png",
+			"points": "10",
+			"pj": "5",
+			"pg": "3",
+			"pe": "1",
+			"pp": "1",
+			"gf": "6",
+			"gc": "2",
+			"dif": "+4"
+		},
+		{
+			"rank": 4,
+			"club": "Argentinos Juniors",
+			"logo": "https://statics-files.tycsports.com/escudos/2.png",
+			"points": "2",
+			"pj": "5",
+			"pg": "0",
+			"pe": "2",
+			"pp": "3",
+			"gf": "4",
+			"gc": "12",
+			"dif": "-8"
+		}
+	]
+}
