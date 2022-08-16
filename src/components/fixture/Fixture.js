@@ -10,6 +10,7 @@ const Fixture = () => {
 
 	return (
 		<>
+			<h4 className={styles.title}>FIXTURE</h4>
 			{aux.map((i, index) => {
 				return (
 					<div className={styles.container}>
