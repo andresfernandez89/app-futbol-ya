@@ -13,7 +13,7 @@ const Fixture = () => {
 			<h4 className={styles.title}>FIXTURE</h4>
 			{aux.map((i, index) => {
 				return (
-					<div className={styles.container}>
+					<div key={i} className={styles.container}>
 						<Row justify="center" align="middle">
 							<Col className={styles.time}>12:30 hs</Col>
 						</Row>
