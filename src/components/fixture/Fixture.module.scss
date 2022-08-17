@@ -15,9 +15,11 @@
 		width: 200px;
 		text-align: center;
 		background-color: #ced4da;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
 	}
 	.match {
-		border-radius: 10px;
+		border-radius: 3px;
 		height: 100%;
 		padding: 0 5px;
 		background-color: #f8f9fa;
