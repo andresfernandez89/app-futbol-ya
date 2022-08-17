@@ -53,7 +53,7 @@ const columns = [
 
 const Standings = () => (
 	<div className={styles.standingsContainer}>
-		<h4>TABLA DE POSICIONES</h4>
+		<h4 className={styles.title}>TABLA DE POSICIONES</h4>
 		<Table columns={columns} dataSource={dataStanding.standings} size="small" pagination={false} />
 	</div>
 );
