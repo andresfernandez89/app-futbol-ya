@@ -24,15 +24,6 @@
 	}
 }
 
-.mobile {
-	display: none;
-	height: 100%;
-	@media only screen and (max-width: 768px) {
-		display: block;
-		position: absolute;
-		right: 0;
-	}
-}
 .mainContainer {
 	display: flex;
 	justify-content: space-between;
@@ -47,6 +38,21 @@
 		margin-bottom: 5px;
 		color: #bbbcc3;
 		align-self: center;
+	}
+	.mobile {
+		display: none;
+		height: 100%;
+		@media only screen and (max-width: 768px) {
+			display: block;
+			position: absolute;
+			right: 0;
+		}
+		.btnHamburgerClick {
+			height: 100%;
+			span:first-child {
+				font-size: 1.3rem;
+			}
+		}
 	}
 	.mobileHidden {
 		color: #f9f3ee;
