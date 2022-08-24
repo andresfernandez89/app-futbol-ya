@@ -10,7 +10,6 @@ const App = () => {
 		<div className={styles.mainContainer}>
 			<Navbar data={data} />
 			<Content className={styles.content}>
-				<h1 className="text-center">FUTBOL YA</h1>
 				<DetailContainer />
 			</Content>
 			<footer className={styles.footer}>© 2022 Copyright - futbolya.com</footer>
