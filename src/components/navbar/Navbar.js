@@ -79,9 +79,10 @@ const Navbar = ({data}) => {
 	};
 
 	return (
-		<div>
+		<div className={styles.mainContainer}>
+			<h1 className={styles.h1}>FUTBOL YA</h1>
 			<div className={styles.mobile}>
-				<Button onClick={handleHamburgerClick}>
+				<Button className={styles.btnHamburgerClick} onClick={handleHamburgerClick}>
 					<MenuOutlined />
 				</Button>
 				<Drawer

@@ -24,48 +24,65 @@
 	}
 }
 
-.mobile {
-	display: none;
-	height: 100%;
-	@media only screen and (max-width: 768px) {
-		display: block;
-		position: absolute;
-		right: 0;
-	}
-}
-
-.mobileHidden {
+.mainContainer {
+	display: flex;
+	justify-content: space-between;
 	width: 100%;
 	position: fixed;
 	background-color: #1a1a2e;
-	color: #f9f3ee;
-	display: flex;
-	justify-content: flex-end;
-
-	@media only screen and (max-width: 768px) {
+	.h1 {
+		font-size: 2rem;
+		font-weight: 900;
+		margin-left: 30px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		color: #bbbcc3;
+		align-self: center;
+	}
+	.mobile {
 		display: none;
-	}
-	.btnAuth,
-	.btnServices {
-		color: #f9f3ee;
-		font-weight: bold;
 		height: 100%;
-	}
-	.btnAuth {
-		border-radius: 0px;
-		border-style: outset;
-	}
-	.btnServices {
-		&:hover {
-			background-color: #816797;
-			color: #f9f3ee;
+		@media only screen and (max-width: 768px) {
+			display: block;
+			position: absolute;
+			right: 0;
 		}
-		&:focus {
-			/* no me toma al hacer focus */
-			background-color: #816797;
-			border-radius: 10px;
-			padding: 5px 10px 2px 10px;
+		.btnHamburgerClick {
+			height: 100%;
+			span:first-child {
+				font-size: 1.3rem;
+			}
+		}
+	}
+	.mobileHidden {
+		color: #f9f3ee;
+		display: flex;
+		justify-content: flex-end;
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+		.btnAuth,
+		.btnServices {
 			color: #f9f3ee;
+			font-weight: bold;
+			height: 100%;
+		}
+		.btnAuth {
+			border-radius: 0px;
+			border-style: outset;
+		}
+		.btnServices {
+			&:hover {
+				background-color: #816797;
+				color: #f9f3ee;
+			}
+			&:focus {
+				/* no me toma al hacer focus */
+				background-color: #816797;
+				border-radius: 10px;
+				padding: 5px 10px 2px 10px;
+				color: #f9f3ee;
+			}
 		}
 	}
 }
