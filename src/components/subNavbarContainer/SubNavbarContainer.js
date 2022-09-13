@@ -1,7 +1,10 @@
+import LeagueContainer from "../leagueContainer/LeagueContainer";
+import styles from "./SubNavbarContainer.module.scss";
+
 const SubNavbarContainer = () => {
 	return (
-		<div>
-			<div>Title</div>
+		<div className={styles.container}>
+			<LeagueContainer />
 			<div>SubNavBar</div>
 		</div>
 	);
