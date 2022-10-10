@@ -11,14 +11,17 @@ import "antd/dist/antd.min.css";
 import "./index.scss";
 import RootLayout from "./pages/RootLayout/RootLayout";
 import DetailContainer from "./components/detailContainer/DetailContainer";
+import DefaulContentLeague from "./components/defaultContentLeague/DefaultContentLeague";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
-			<Route index element={<DetailContainer />}></Route>
-			<Route path="posiciones" element={<h1>Posiciones</h1>} />
-			<Route path="calendario" element={<h3>Calendario</h3>} />
-			<Route path="goleadores" element={<h3>Goleadores</h3>} />
+			<Route path="/" element={<DetailContainer />}>
+				<Route index element={<DefaulContentLeague />} />
+				<Route path="posiciones" element={<h1>Posiciones</h1>} />
+				<Route path="calendario" element={<h3>Calendario</h3>} />
+				<Route path="goleadores" element={<h3>Goleadores</h3>} />
+			</Route>
 		</Route>
 	)
 );
