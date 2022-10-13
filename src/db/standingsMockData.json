@@ -4,6 +4,7 @@
 	"season": 2022,
 	"standings": [
 		{
+			"key": 1,
 			"rank": 1,
 			"logo": "https://statics-files.tycsports.com/escudos/16.png",
 			"club": "Racing Club",
@@ -17,6 +18,7 @@
 			"dif": "+14"
 		},
 		{
+			"key": 2,
 			"rank": 2,
 			"club": "Aldosivi",
 			"logo": "https://statics-files.tycsports.com/escudos/122.png",
@@ -30,6 +32,7 @@
 			"dif": "+11"
 		},
 		{
+			"key": 3,
 			"rank": 3,
 			"club": "Talleres",
 			"logo": "https://statics-files.tycsports.com/escudos/135.png",
@@ -43,6 +46,7 @@
 			"dif": "+4"
 		},
 		{
+			"key": 4,
 			"rank": 4,
 			"club": "Argentinos Juniors",
 			"logo": "https://statics-files.tycsports.com/escudos/2.png",
