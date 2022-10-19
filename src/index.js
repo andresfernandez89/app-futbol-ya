@@ -18,7 +18,7 @@ const router = createBrowserRouter(
 		<Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
 			<Route path="/" element={<DetailContainer />}>
 				<Route index element={<DefaulContentLeague />} />
-				<Route path="posiciones" element={<h1>Posiciones</h1>} />
+				<Route path="posiciones" element={<h3>Posiciones</h3>} />
 				<Route path="calendario" element={<h3>Calendario</h3>} />
 				<Route path="goleadores" element={<h3>Goleadores</h3>} />
 			</Route>
