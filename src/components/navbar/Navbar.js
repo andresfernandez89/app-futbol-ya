@@ -68,14 +68,14 @@ const players = (data) => (
 );
 
 const Navbar = ({data}) => {
-	const [visible, setVisible] = useState(false);
+	const [open, setOpen] = useState(false);
 
 	const handleHamburgerClick = () => {
-		setVisible(true);
+		setOpen(true);
 	};
 
 	const handleDrawerClose = () => {
-		setVisible(false);
+		setOpen(false);
 	};
 
 	return (
@@ -89,7 +89,7 @@ const Navbar = ({data}) => {
 					className={styles.mobileDrawer}
 					placement="right"
 					closable={false}
-					visible={visible}
+					open={open}
 					onClose={handleDrawerClose}
 				>
 					<Row justify="end">
