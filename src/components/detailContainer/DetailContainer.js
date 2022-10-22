@@ -1,14 +1,14 @@
 import SubNavbarContainer from "../subNavbarContainer/SubNavbarContainer";
 import styles from "./DetailContainer.module.scss";
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const DetailContainer = () => {
-	return (
-		<div className={styles.mainContainer}>
-			<SubNavbarContainer />
-			<Outlet />
-		</div>
-	);
+  return (
+    <div className={styles.mainContainer}>
+      <SubNavbarContainer />
+      <Outlet />
+    </div>
+  );
 };
 
 export default DetailContainer;

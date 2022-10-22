@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Link} from "react-router-dom";
 import {Menu, Row, Col, Button, Dropdown, Drawer} from "antd";
 import Icon, {MenuOutlined} from "@ant-design/icons";
 import styles from "./Navbar.module.scss";
@@ -68,19 +69,21 @@ const players = (data) => (
 );
 
 const Navbar = ({data}) => {
-	const [visible, setVisible] = useState(false);
+	const [open, setOpen] = useState(false);
 
 	const handleHamburgerClick = () => {
-		setVisible(true);
+		setOpen(true);
 	};
 
 	const handleDrawerClose = () => {
-		setVisible(false);
+		setOpen(false);
 	};
 
 	return (
 		<div className={styles.mainContainer}>
-			<h1 className={styles.h1}>FUTBOL YA</h1>
+			<Link to="/" className={styles.h1}>
+				FUTBOL YA
+			</Link>
 			<div className={styles.mobile}>
 				<Button className={styles.btnHamburgerClick} onClick={handleHamburgerClick}>
 					<MenuOutlined />
@@ -89,7 +92,7 @@ const Navbar = ({data}) => {
 					className={styles.mobileDrawer}
 					placement="right"
 					closable={false}
-					visible={visible}
+					open={open}
 					onClose={handleDrawerClose}
 				>
 					<Row justify="end">
