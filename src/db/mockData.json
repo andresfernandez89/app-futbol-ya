@@ -1,62 +1,65 @@
 {
-	"country": [
-		{
-			"id": "1",
-			"name": "Argentina",
-			"leagues": [
-				{
-					"id": "1",
-					"name": "Primera Division Argentina",
-					"teams": [
-						{
-							"name": "Racing Club",
-							"logo": "https://statics-files.tycsports.com/escudos/16.png",
-							"players": [{"name": "Dario Copetti"}]
-						},
-						{
-							"name": "Boca Juniors",
-							"logo": "https://statics-files.tycsports.com/escudos/5.png",
-							"players": [{"name": "Dario Benedetto"}]
-						},
-						{
-							"name": "River Plate",
-							"logo": "https://statics-files.tycsports.com/escudos/17.png",
-							"players": [{"name": "Enzo Fernandez"}]
-						},
-						{
-							"name": "Independiente",
-							"logo": "https://statics-files.tycsports.com/escudos/10.png",
-							"players": [{"name": "Braian Fernandez"}]
-						}
-					]
-				},
-				{
-					"id": "2",
-					"name": "Segunda Division Argentina",
-					"teams": [
-						{"name": "Alvarado", "players": [{"name": "Victor Perez"}]},
-						{"name": "Instituto", "players": [{"name": "Sergio Urrutia"}]},
-						{"name": "Almagro", "players": [{"name": "Pedro Suarez"}]},
-						{"name": "Chacarita", "players": [{"name": "Lucas Ledesma"}]}
-					]
-				}
-			]
-		},
-		{
-			"id": "2",
-			"name": "Copa del Mundo",
-			"leagues": [
-				{
-					"id": "1",
-					"name": "Copa del Mundo",
-					"teams": [
-						{"name": "Argentina", "players": [{"name": "Damian Arruabarrena"}]},
-						{"name": "Brasil", "players": [{"name": "Milton Caceres"}]},
-						{"name": "España", "players": [{"name": "Luis Bauza"}]},
-						{"name": "Francia", "players": [{"name": "Felipe Almiron"}]}
-					]
-				}
-			]
-		}
-	]
+  "country": [
+    {
+      "id": "1",
+      "name": "Argentina",
+      "leagues": [
+        {
+          "id": "1",
+          "name": "Primera Division Argentina",
+          "teams": [
+            {
+              "name": "Racing Club",
+              "logo": "https://statics-files.tycsports.com/escudos/16.png",
+              "players": [{ "name": "Dario Copetti" }]
+            },
+            {
+              "name": "Boca Juniors",
+              "logo": "https://statics-files.tycsports.com/escudos/5.png",
+              "players": [{ "name": "Dario Benedetto" }]
+            },
+            {
+              "name": "River Plate",
+              "logo": "https://statics-files.tycsports.com/escudos/17.png",
+              "players": [{ "name": "Enzo Fernandez" }]
+            },
+            {
+              "name": "Independiente",
+              "logo": "https://statics-files.tycsports.com/escudos/10.png",
+              "players": [{ "name": "Braian Fernandez" }]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Segunda Division Argentina",
+          "teams": [
+            { "name": "Alvarado", "players": [{ "name": "Victor Perez" }] },
+            { "name": "Instituto", "players": [{ "name": "Sergio Urrutia" }] },
+            { "name": "Almagro", "players": [{ "name": "Pedro Suarez" }] },
+            { "name": "Chacarita", "players": [{ "name": "Lucas Ledesma" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Copa del Mundo",
+      "leagues": [
+        {
+          "id": "1",
+          "name": "Copa del Mundo",
+          "teams": [
+            {
+              "name": "Argentina",
+              "players": [{ "name": "Damian Arruabarrena" }]
+            },
+            { "name": "Brasil", "players": [{ "name": "Milton Caceres" }] },
+            { "name": "España", "players": [{ "name": "Luis Bauza" }] },
+            { "name": "Francia", "players": [{ "name": "Felipe Almiron" }] }
+          ]
+        }
+      ]
+    }
+  ]
 }
