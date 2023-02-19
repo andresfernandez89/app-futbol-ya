@@ -16,7 +16,7 @@ import DefaulContentLeague from "./components/defaultContentLeague/DefaultConten
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
-			<Route path="/" element={<DetailContainer />}>
+			<Route element={<DetailContainer />}>
 				<Route index element={<DefaulContentLeague />} />
 				<Route path="posiciones" element={<h3>Posiciones</h3>} />
 				<Route path="calendario" element={<h3>Calendario</h3>} />
