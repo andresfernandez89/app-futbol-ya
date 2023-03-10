@@ -1,11 +1,11 @@
-import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
-import {Menu, Row, Col, Button, Dropdown, Drawer} from "antd";
-import Icon, {MenuOutlined} from "@ant-design/icons";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, Row, Col, Button, Dropdown, Drawer } from "antd";
+import Icon, { MenuOutlined } from "@ant-design/icons";
 import styles from "./Navbar.module.scss";
 //import {getLeaguesByCountry} from "../../services/leagues/getLeaguesByCountry";
 
-const menuItems = ({arg, eng, argLeague, engLeague}) => {
+const menuItems = ({ arg, eng, argLeague, engLeague }) => {
 	return (
 		<Menu
 			items={[
@@ -13,20 +13,22 @@ const menuItems = ({arg, eng, argLeague, engLeague}) => {
 					label: <a href="/index.html">{arg[0].name}</a>,
 					key: `${arg[0].code}Leagues`,
 					children: argLeague.map((element) => {
-						const {name, id} = element.league;
+						const { name, id } = element.league;
 						if (name === "Liga Profesional Argentina" || name === "Primera Nacional") {
-							return {label: <a href="/">{name}</a>, key: id};
+							return { label: <a href="/">{name}</a>, key: id };
 						}
+						return null;
 					}),
 				},
 				{
 					label: <a href="/index.html">{eng[0].name}</a>,
 					key: `${eng[0].code}Leagues`,
 					children: engLeague.map((element) => {
-						const {name, id} = element.league;
+						const { name, id } = element.league;
 						if (name === "Premier League" || name === "FA Cup") {
-							return {label: <a href="/">{name}</a>, key: id};
+							return { label: <a href="/">{name}</a>, key: id };
 						}
+						return null;
 					}),
 				},
 			]}
@@ -41,9 +43,9 @@ const XmarkSvg = () => (
 );
 const XmarkIcon = (props) => <Icon component={XmarkSvg} {...props} />;
 
-const Navbar = ({data}) => {
+const Navbar = ({ data }) => {
 	const [open, setOpen] = useState(false);
-	const {arg, eng, argLeague, engLeague} = data;
+	const { arg, eng, argLeague, engLeague } = data;
 
 	const handleHamburgerClick = () => {
 		setOpen(true);
@@ -73,7 +75,7 @@ const Navbar = ({data}) => {
 						<XmarkIcon className={styles.svgClose} onClick={handleDrawerClose} />
 						<Col span={24}>
 							<Button className={styles.btnServices} type="dash">
-								<Dropdown overlay={menuItems({arg, eng, argLeague, engLeague})} arrow>
+								<Dropdown overlay={menuItems({ arg, eng, argLeague, engLeague })} arrow>
 									<a href="index.html" onClick={(e) => e.preventDefault()}>
 										Torneos
 									</a>
@@ -82,7 +84,7 @@ const Navbar = ({data}) => {
 						</Col>
 						<Col span={24}>
 							<Button className={styles.btnServices} type="dash">
-								<Dropdown overlay={menuItems({arg, eng, argLeague, engLeague})} arrow>
+								<Dropdown overlay={menuItems({ arg, eng, argLeague, engLeague })} arrow>
 									<a href="index.html" onClick={(e) => e.preventDefault()}>
 										Equipos
 									</a>
@@ -91,7 +93,7 @@ const Navbar = ({data}) => {
 						</Col>
 						<Col span={24}>
 							<Button className={styles.btnServices} type="dash">
-								<Dropdown overlay={menuItems({arg, eng, argLeague, engLeague})} arrow>
+								<Dropdown overlay={menuItems({ arg, eng, argLeague, engLeague })} arrow>
 									<a href="index.html" onClick={(e) => e.preventDefault()}>
 										Jugadores
 									</a>
@@ -113,21 +115,21 @@ const Navbar = ({data}) => {
 			</div>
 			<div className={styles.mobileHidden}>
 				<Button className={styles.btnServices} type="text">
-					<Dropdown overlay={menuItems({arg, eng, argLeague, engLeague})} arrow>
+					<Dropdown overlay={menuItems({ arg, eng, argLeague, engLeague })} arrow>
 						<a href="index.html" onClick={(e) => e.preventDefault()}>
 							Torneos
 						</a>
 					</Dropdown>
 				</Button>
 				<Button className={styles.btnServices} type="text">
-					<Dropdown overlay={menuItems({arg, eng, argLeague, engLeague})} arrow>
+					<Dropdown overlay={menuItems({ arg, eng, argLeague, engLeague })} arrow>
 						<a href="index.html" onClick={(e) => e.preventDefault()}>
 							Equipos
 						</a>
 					</Dropdown>
 				</Button>
 				<Button className={styles.btnServices} type="text">
-					<Dropdown overlay={menuItems({arg, eng, argLeague, engLeague})} arrow>
+					<Dropdown overlay={menuItems({ arg, eng, argLeague, engLeague })} arrow>
 						<a href="index.html" onClick={(e) => e.preventDefault()}>
 							Jugadores
 						</a>
