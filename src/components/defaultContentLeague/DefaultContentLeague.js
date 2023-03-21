@@ -10,7 +10,7 @@ const DefaulContentLeague = () => {
 					<Standings dataLeague={{ id: 128, season: 2023 }} />
 				</Col>
 				<Col xs={22} sm={22} md={22} lg={10}>
-					<Fixture />
+					<Fixture dataLeague={{ id: 128, season: 2023 }} />
 				</Col>
 			</Row>
 		</>
