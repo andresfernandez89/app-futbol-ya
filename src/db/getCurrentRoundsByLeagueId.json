@@ -1,0 +1,15 @@
+{
+	"get": "fixtures/rounds",
+	"parameters": {
+		"season": "2023",
+		"league": "128",
+		"current": "true"
+	},
+	"errors": [],
+	"results": 1,
+	"paging": {
+		"current": 1,
+		"total": 1
+	},
+	"response": ["1st Phase - 8"]
+}
