@@ -1,75 +1,91 @@
-import data from "../../db/mockData.json";
+import { useEffect, useState } from "react";
 import styles from "./Fixture.module.scss";
 import { Row, Col } from "antd";
+import data from "../../db/getFixtureByLeagueId.json";
 
-const Fixture = () => {
-  let aux = [];
-  for (let i = 1; i < 4; i++) {
-    aux.push(i);
-  }
-
-  return (
-    <>
-      <h4 className={styles.title}>FIXTURE</h4>
-      {aux.map((i, index) => {
-        return (
-          <div key={i} className={styles.container}>
-            <Row justify="center" align="middle">
-              <Col className={styles.time}>12:30 hs</Col>
-            </Row>
-            <Row justify="center" wrap={false}>
-              <Col xs={24} sm={24} md={24}>
-                <Row
-                  className={styles.match}
-                  justify="center"
-                  wrap={false}
-                  align="middle"
-                >
-                  <Col
-                    xs={11}
-                    sm={11}
-                    md={10}
-                    lg={10}
-                    className={`${styles.containerTeam} ${styles.containerTeamA}`}
-                  >
-                    <span className={styles.team}>
-                      {data.country[0].leagues[0].teams[i].name}
-                    </span>
-                    <img
-                      src={data.country[0].leagues[0].teams[i].logo}
-                      className={styles.logo}
-                      alt="logo club"
-                    />
-                    <span className={styles.result}>2</span>
-                  </Col>
-                  <Col xs={2} sm={2} className={styles.versus}>
-                    vs
-                  </Col>
-                  <Col
-                    xs={11}
-                    sm={11}
-                    md={10}
-                    lg={10}
-                    className={`${styles.containerTeam} ${styles.containerTeamB}`}
-                  >
-                    <span className={styles.result}>0</span>
-                    <img
-                      src={data.country[0].leagues[0].teams[index].logo}
-                      className={styles.logo}
-                      alt="logo club"
-                    />
-                    <span className={styles.team}>
-                      {data.country[0].leagues[0].teams[index].name}
-                    </span>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </div>
-        );
-      })}
-    </>
-  );
+const Fixture = ({ dataLeague }) => {
+	const [id, setId] = useState(dataLeague.id);
+	const [season, setSeason] = useState(dataLeague.season);
+	const [dataFixture, setDataFixture] = useState(null);
+	useEffect(() => {
+		let newArr = data.response.filter((res) => {
+			return res.league.round === "1st Phase - 10";
+		});
+		setTimeout(setDataFixture(newArr), 3000);
+	}, [id, season]);
+	return (
+		<>
+			<h4 className={styles.title}>FIXTURE</h4>
+			{dataFixture
+				? dataFixture.map((data) => {
+						let statusMatch;
+						if (data.fixture.status.short === "FT") {
+							statusMatch = "Finalizado";
+						} else if (data.fixture.status.short === "1H") {
+							statusMatch = "Primer Tiempo";
+						} else if (data.fixture.status.short === "HT") {
+							statusMatch = "Entretiempo";
+						} else if (data.fixture.status.short === "2H") {
+							statusMatch = "Segundo Tiempo";
+						} else if (data.fixture.status.short === "TBD") {
+							const date = new Date(data.fixture.timestamp * 1000);
+							const day = date.getDate();
+							const month = date
+								.toLocaleString("es-ES", { month: "long" })
+								.replace(/^\w/, (c) => c.toUpperCase());
+							const dayOfWeek = date
+								.toLocaleString("es-ES", { weekday: "long" })
+								.replace(/^\w/, (c) => c.toUpperCase());
+							const hour = date.getHours();
+							let minutes = date.getMinutes().toString().padEnd(2, "0");
+							statusMatch = `${dayOfWeek} ${day} de ${month} ${hour}:${minutes} Hs`;
+						}
+						return (
+							<div key={data.fixture.id} className={styles.container}>
+								<Row justify="center" align="middle">
+									<Col className={styles.status}>{statusMatch}</Col>
+								</Row>
+								<Row justify="center" wrap={false}>
+									<Col xs={24} sm={24} md={24}>
+										<Row className={styles.match} justify="center" wrap={false} align="middle">
+											<Col
+												xs={11}
+												sm={11}
+												md={10}
+												lg={10}
+												className={`${styles.containerTeam} ${styles.containerTeamA}`}
+											>
+												<span className={styles.team}>{data.teams.home.name}</span>
+												<img src={data.teams.home.logo} className={styles.logo} alt="logo club" />
+												<span className={styles.result}>
+													{data.score.extratime.home || data.score.fulltime.home}
+												</span>
+											</Col>
+											<Col xs={2} sm={2} className={styles.versus}>
+												vs
+											</Col>
+											<Col
+												xs={11}
+												sm={11}
+												md={10}
+												lg={10}
+												className={`${styles.containerTeam} ${styles.containerTeamB}`}
+											>
+												<span className={styles.result}>
+													{data.score.extratime.away || data.score.fulltime.away}
+												</span>
+												<img src={data.teams.away.logo} className={styles.logo} alt="logo club" />
+												<span className={styles.team}>{data.teams.away.name}</span>
+											</Col>
+										</Row>
+									</Col>
+								</Row>
+							</div>
+						);
+				  })
+				: ""}
+		</>
+	);
 };
 
 export default Fixture;
