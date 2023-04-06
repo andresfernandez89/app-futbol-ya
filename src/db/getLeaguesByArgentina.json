@@ -1,0 +1,238 @@
+{
+	"get": "leagues",
+	"parameters": {
+		"season": "2023",
+		"country": "argentina",
+		"type": "league"
+	},
+	"errors": [],
+	"results": 6,
+	"paging": {
+		"current": 1,
+		"total": 1
+	},
+	"response": [
+		{
+			"league": {
+				"id": 128,
+				"name": "Liga Profesional Argentina",
+				"type": "League",
+				"logo": "https://media.api-sports.io/football/leagues/128.png"
+			},
+			"country": {
+				"name": "Argentina",
+				"code": "AR",
+				"flag": "https://media.api-sports.io/flags/ar.svg"
+			},
+			"seasons": [
+				{
+					"year": 2023,
+					"start": "2023-01-27",
+					"end": "2023-11-19",
+					"current": true,
+					"coverage": {
+						"fixtures": {
+							"events": true,
+							"lineups": true,
+							"statistics_fixtures": true,
+							"statistics_players": true
+						},
+						"standings": true,
+						"players": false,
+						"top_scorers": false,
+						"top_assists": false,
+						"top_cards": false,
+						"injuries": false,
+						"predictions": true,
+						"odds": true
+					}
+				}
+			]
+		},
+		{
+			"league": {
+				"id": 129,
+				"name": "Primera Nacional",
+				"type": "League",
+				"logo": "https://media.api-sports.io/football/leagues/129.png"
+			},
+			"country": {
+				"name": "Argentina",
+				"code": "AR",
+				"flag": "https://media-3.api-sports.io/flags/ar.svg"
+			},
+			"seasons": [
+				{
+					"year": 2023,
+					"start": "2023-02-04",
+					"end": "2023-06-09",
+					"current": true,
+					"coverage": {
+						"fixtures": {
+							"events": true,
+							"lineups": true,
+							"statistics_fixtures": false,
+							"statistics_players": false
+						},
+						"standings": true,
+						"players": false,
+						"top_scorers": false,
+						"top_assists": false,
+						"top_cards": false,
+						"injuries": false,
+						"predictions": true,
+						"odds": true
+					}
+				}
+			]
+		},
+		{
+			"league": {
+				"id": 131,
+				"name": "Primera B Metropolitana",
+				"type": "League",
+				"logo": "https://media.api-sports.io/football/leagues/131.png"
+			},
+			"country": {
+				"name": "Argentina",
+				"code": "AR",
+				"flag": "https://media.api-sports.io/flags/ar.svg"
+			},
+			"seasons": [
+				{
+					"year": 2023,
+					"start": "2023-02-11",
+					"end": "2023-06-03",
+					"current": true,
+					"coverage": {
+						"fixtures": {
+							"events": true,
+							"lineups": true,
+							"statistics_fixtures": false,
+							"statistics_players": false
+						},
+						"standings": true,
+						"players": true,
+						"top_scorers": true,
+						"top_assists": true,
+						"top_cards": true,
+						"injuries": false,
+						"predictions": true,
+						"odds": true
+					}
+				}
+			]
+		},
+		{
+			"league": {
+				"id": 132,
+				"name": "Primera C",
+				"type": "League",
+				"logo": "https://media-3.api-sports.io/football/leagues/132.png"
+			},
+			"country": {
+				"name": "Argentina",
+				"code": "AR",
+				"flag": "https://media.api-sports.io/flags/ar.svg"
+			},
+			"seasons": [
+				{
+					"year": 2023,
+					"start": "2023-01-27",
+					"end": "2023-06-02",
+					"current": true,
+					"coverage": {
+						"fixtures": {
+							"events": true,
+							"lineups": false,
+							"statistics_fixtures": false,
+							"statistics_players": false
+						},
+						"standings": true,
+						"players": false,
+						"top_scorers": false,
+						"top_assists": false,
+						"top_cards": false,
+						"injuries": false,
+						"predictions": true,
+						"odds": true
+					}
+				}
+			]
+		},
+		{
+			"league": {
+				"id": 906,
+				"name": "Reserve League",
+				"type": "League",
+				"logo": "https://media.api-sports.io/football/leagues/906.png"
+			},
+			"country": {
+				"name": "Argentina",
+				"code": "AR",
+				"flag": "https://media-3.api-sports.io/flags/ar.svg"
+			},
+			"seasons": [
+				{
+					"year": 2023,
+					"start": "2023-01-26",
+					"end": "2023-11-19",
+					"current": true,
+					"coverage": {
+						"fixtures": {
+							"events": true,
+							"lineups": false,
+							"statistics_fixtures": false,
+							"statistics_players": false
+						},
+						"standings": false,
+						"players": false,
+						"top_scorers": false,
+						"top_assists": false,
+						"top_cards": false,
+						"injuries": false,
+						"predictions": true,
+						"odds": true
+					}
+				}
+			]
+		},
+		{
+			"league": {
+				"id": 133,
+				"name": "Primera D",
+				"type": "League",
+				"logo": "https://media-3.api-sports.io/football/leagues/133.png"
+			},
+			"country": {
+				"name": "Argentina",
+				"code": "AR",
+				"flag": "https://media-3.api-sports.io/flags/ar.svg"
+			},
+			"seasons": [
+				{
+					"year": 2023,
+					"start": "2023-03-18",
+					"end": "2023-11-25",
+					"current": true,
+					"coverage": {
+						"fixtures": {
+							"events": false,
+							"lineups": false,
+							"statistics_fixtures": false,
+							"statistics_players": false
+						},
+						"standings": false,
+						"players": false,
+						"top_scorers": false,
+						"top_assists": false,
+						"top_cards": false,
+						"injuries": false,
+						"predictions": true,
+						"odds": false
+					}
+				}
+			]
+		}
+	]
+}
