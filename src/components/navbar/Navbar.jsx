@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Row, Col, Button, Dropdown, Drawer } from "antd";
-import Icon, { MenuOutlined } from "@ant-design/icons";
 import styles from "./Navbar.module.scss";
+import Icon, { MenuOutlined } from "@ant-design/icons";
 //import {getLeaguesByCountry} from "../../services/leagues/getLeaguesByCountry";
 
 const menuItems = ({ arg, eng, argLeague, engLeague }) => {
