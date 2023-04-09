@@ -7,8 +7,8 @@ import {
 	Route,
 } from "react-router-dom";
 import NotFound from "./pages/NotFound/NotFound";
-import "antd/dist/antd.min.css";
 import "./index.scss";
+import "antd/dist/reset.css";
 import RootLayout from "./pages/RootLayout/RootLayout";
 import DetailContainer from "./components/detailContainer/DetailContainer";
 import DefaultContentLeague from "./components/defaultContentLeague/DefaultContentLeague";
