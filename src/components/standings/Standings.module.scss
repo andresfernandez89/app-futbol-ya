@@ -1,31 +1,31 @@
-.title {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
 .standingsContainer {
-  :global(.ant-table.ant-table-small .ant-table-tbody) {
-    > tr > td:global(.ant-table-cell) {
-      text-align: center;
-      padding: 1px 1px;
-    }
-  }
-  :global(.ant-table.ant-table-small .ant-table-thead) {
-    > tr > th:global(.ant-table-cell) {
-      text-align: center;
-      padding: 1px 1px;
-    }
-  }
+	.title {
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 10px;
+		font-size: 1.2rem;
+	}
+	:global(.ant-table.ant-table-small .ant-table-tbody) {
+		> tr > td:global(.ant-table-cell) {
+			text-align: center;
+			padding: 1px 1px;
+		}
+	}
+	:global(.ant-table.ant-table-small .ant-table-thead) {
+		> tr > th:global(.ant-table-cell) {
+			text-align: center;
+			padding: 1px 1px;
+		}
+	}
 
-  .logo {
-    width: 24px;
-    height: 24px;
-  }
+	.logo {
+		width: 24px;
+		height: 24px;
+	}
 
-  h4 {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+	h4 {
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
 }
