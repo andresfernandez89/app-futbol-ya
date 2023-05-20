@@ -56,7 +56,7 @@ const Navbar = ({ data }) => {
 	};
 
 	return (
-		<div className={styles.mainContainer}>
+		<div className={styles.navbar}>
 			<Link to="/" className={styles.h1}>
 				FUTBOL YA
 			</Link>

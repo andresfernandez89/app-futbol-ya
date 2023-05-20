@@ -1,4 +1,14 @@
-.container {
+.defaultContentLeague {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
+
+	@media only screen and (max-width: 992px) {
+		justify-content: center;
+		.standings {
+			margin-bottom: 50px;
+		}
+	}
+	.standings {
+		max-width: none;
+	}
 }

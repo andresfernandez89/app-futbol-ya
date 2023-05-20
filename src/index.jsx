@@ -13,13 +13,14 @@ import { ConfigProvider } from 'antd';
 import RootLayout from "./pages/RootLayout/RootLayout";
 import DetailContainer from "./components/detailContainer/DetailContainer";
 import DefaultContentLeague from "./components/defaultContentLeague/DefaultContentLeague";
+import Standings from "./components/standings/Standings";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
 			<Route element={<DetailContainer />}>
 				<Route index element={<DefaultContentLeague />} />
-				<Route path="posiciones" element={<h3>Posiciones</h3>} />
+				<Route path="standings" element={<Standings dataLeague={{ id: 128, season: 2023 }} />} />
 				<Route path="calendario" element={<h3>Calendario</h3>} />
 				<Route path="goleadores" element={<h3>Goleadores</h3>} />
 			</Route>

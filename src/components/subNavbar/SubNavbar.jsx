@@ -13,12 +13,12 @@ const SubNavbar = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.subNavbar}>
       <Segmented
         options={[
           {
             label: <p>Posiciones</p>,
-            value: "posiciones",
+            value: "standings",
           },
           {
             label: <p>Calendario</p>,
