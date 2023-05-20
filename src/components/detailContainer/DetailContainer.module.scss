@@ -1,6 +1,9 @@
-.mainContainer {
-  margin-top: 100px;
-  @media only screen and (max-width: 768px) {
-    margin: 80px 0 20px 0;
-  }
+.detailContainer {
+	margin: 80px 70px;
+	@media only screen and (max-width: 768px) {
+		margin: 80px 30px 50px 30px;
+	}
+	@media only screen and (min-width: 992) {
+		margin: 80px 275px;
+	}
 }
