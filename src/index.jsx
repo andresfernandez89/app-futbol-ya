@@ -9,7 +9,7 @@ import {
 import NotFound from "./pages/NotFound/NotFound";
 import "./index.scss";
 import "antd/dist/reset.css";
-import { ConfigProvider } from 'antd';
+import { ConfigProvider } from "antd";
 import RootLayout from "./pages/RootLayout/RootLayout";
 import DetailContainer from "./components/detailContainer/DetailContainer";
 import DefaultContentLeague from "./components/defaultContentLeague/DefaultContentLeague";
@@ -17,7 +17,7 @@ import Standings from "./components/standings/Standings";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
+		<Route element={<RootLayout />} errorElement={<NotFound />}>
 			<Route element={<DetailContainer />}>
 				<Route index element={<DefaultContentLeague />} />
 				<Route path="standings" element={<Standings dataLeague={{ id: 128, season: 2023 }} />} />
@@ -33,13 +33,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
 		<ConfigProvider
-    theme={{
-      token: {
-        fontFamily: "$font-stack",
-      },
-    }}
-  >
-		<RouterProvider router={router} />
-  </ConfigProvider>
+			theme={{
+				token: {
+					fontFamily: "$font-stack",
+				},
+			}}
+		>
+			<RouterProvider router={router} />
+		</ConfigProvider>
 	</React.StrictMode>
 );
