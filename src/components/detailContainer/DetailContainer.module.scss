@@ -1,9 +1,22 @@
 .detailContainer {
-	margin: 80px 70px;
-	@media only screen and (max-width: 768px) {
-		margin: 80px 30px 50px 30px;
+	margin: 80px 30px 50px 30px;
+	/* Small devices (portrait tablets and large phones, 600px and up) */
+	@media only screen and (min-width: 600px) {
+		margin: 80px 50px 50px 50px;
 	}
-	@media only screen and (min-width: 992) {
-		margin: 80px 275px;
+
+	/* Medium devices (landscape tablets, 768px and up) */
+	@media only screen and (min-width: 768px) {
+		margin: 80px 70px 50px 70px;
+	}
+
+	/* Large devices (laptops/desktops, 992px and up) */
+	@media only screen and (min-width: 992px) {
+		margin: 80px 60px;
+	}
+
+	/* Extra large devices (large laptops and desktops, 1200px and up) */
+	@media only screen and (min-width: 1200px) {
+		margin: 80px 250px;
 	}
 }
