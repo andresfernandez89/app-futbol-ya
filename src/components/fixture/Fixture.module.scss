@@ -6,19 +6,6 @@
 }
 .container {
 	font-weight: bold;
-	/* Medium devices (landscape tablets, 768px and up) */
-	@media only screen and (min-width: 768px) {
-		margin: 0px 70px;
-	}
-	/* Large devices (laptops/desktops, 992px and up) */
-	@media only screen and (min-width: 992px) {
-		margin: 0px 250px;
-	}
-
-	/* Extra large devices (large laptops and desktops, 1200px and up) */
-	@media only screen and (min-width: 1200px) {
-		margin: 0px 370px;
-	}
 	.status {
 		padding-top: 5px;
 		width: 200px;
