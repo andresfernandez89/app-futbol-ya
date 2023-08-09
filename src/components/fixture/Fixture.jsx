@@ -15,7 +15,7 @@ const Fixture = ({ dataLeague }) => {
 	}, [id, season]);
 	return (
 		<>
-			<div className={styles.container}>
+			<section className={styles.container}>
 				<h4 className={styles.title}>FIXTURE</h4>
 				{dataFixture?.map(({ fixture, teams, score }) => {
 					let statusMatch;
@@ -42,8 +42,10 @@ const Fixture = ({ dataLeague }) => {
 					}
 					return (
 						<div key={fixture.id}>
-							<Row justify="center" align="middle">
-								<Col className={styles.status}>{statusMatch}</Col>
+							<Row justify="center">
+								<Col>
+									<span className={styles.status}>{statusMatch}</span>
+								</Col>
 							</Row>
 							<Row justify="center" wrap={false}>
 								<Col xs={24} sm={24} md={24}>
@@ -58,11 +60,11 @@ const Fixture = ({ dataLeague }) => {
 											<span className={styles.team}>{teams.home.name}</span>
 											<img src={teams.home.logo} className={styles.logo} alt="logo club" />
 											<span className={styles.result}>
-												{score.extratime.home || score.fulltime.home}
+												2{score.extratime.home || score.fulltime.home}
 											</span>
 										</Col>
 										<Col xs={2} sm={2} className={styles.versus}>
-											vs
+											<span>vs</span>
 										</Col>
 										<Col
 											xs={11}
@@ -72,7 +74,7 @@ const Fixture = ({ dataLeague }) => {
 											className={`${styles.containerTeam} ${styles.containerTeamB}`}
 										>
 											<span className={styles.result}>
-												{score.extratime.away || score.fulltime.away}
+												0{score.extratime.away || score.fulltime.away}
 											</span>
 											<img src={teams.away.logo} className={styles.logo} alt="logo club" />
 											<span className={styles.team}>{teams.away.name}</span>
@@ -83,7 +85,7 @@ const Fixture = ({ dataLeague }) => {
 						</div>
 					);
 				})}
-			</div>
+			</section>
 		</>
 	);
 };
