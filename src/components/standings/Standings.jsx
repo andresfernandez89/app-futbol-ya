@@ -78,16 +78,22 @@ const Standings = ({ dataLeague }) => {
 		setTimeout(setDataStandings(newObj), 2000);
 	}, [id, season]);
 	return (
-		<div className={styles.standingsContainer}>
+		<section className={styles.container}>
 			{dataStandings ? (
 				<>
 					<h4 className={styles.title}>TABLA DE POSICIONES</h4>
-					<Table columns={columns} dataSource={dataStandings} size="small" pagination={false} />
+					<Table
+						className={styles.table}
+						columns={columns}
+						dataSource={dataStandings}
+						size="small"
+						pagination={false}
+					/>
 				</>
 			) : (
 				""
 			)}
-		</div>
+		</section>
 	);
 };
 export default Standings;

@@ -1,30 +1,42 @@
-.standingsContainer {
+@use "../../assets/sass/variables" as *;
+
+.container {
+	border: $border-main;
+	border-radius: 8px;
+	padding: 20px 32px;
+	background-color: $bg-container-color;
+	@media only screen and (max-width: 768px) {
+		padding: 20px 0;
+	}
 	.title {
 		text-align: center;
 		font-weight: bold;
-		font-size: 1.2rem;
+		margin-bottom: 25px;
+		font-size: 1.5rem;
+	}
+
+	:global(:where(.css-dev-only-do-not-override-k5qubv).ant-table-wrapper .ant-table) {
+		background: hsla(0, 0%, 100%, 0);
+		color: $font-color;
 	}
 	:global(.ant-table.ant-table-small .ant-table-tbody) {
 		> tr > td:global(.ant-table-cell) {
 			text-align: center;
 			padding: 1px 1px;
+			background: none;
 		}
 	}
 	:global(.ant-table.ant-table-small .ant-table-thead) {
 		> tr > th:global(.ant-table-cell) {
 			text-align: center;
 			padding: 1px 1px;
+			background: hsla(0, 0%, 100%, 0);
+			color: $font-color;
 		}
 	}
 
 	.logo {
 		width: 24px;
 		height: 24px;
-	}
-
-	h4 {
-		text-align: center;
-		font-weight: bold;
-		margin-bottom: 20px;
 	}
 }
