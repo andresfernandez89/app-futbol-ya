@@ -9,7 +9,7 @@ const columns = [
 		dataIndex: "rank",
 	},
 	{
-		title: "",
+		title: " ",
 		dataIndex: "logo",
 		render: (logo) => <img className={styles.logo} src={logo} alt="logo del club"></img>,
 	},
@@ -91,7 +91,7 @@ const Standings = ({ dataLeague }) => {
 					/>
 				</>
 			) : (
-				""
+				<h4 className={styles.notContent}>SIN CONTENIDO DISPONIBLE</h4>
 			)}
 		</section>
 	);
