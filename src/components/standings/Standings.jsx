@@ -1,7 +1,6 @@
 import { Table } from "antd";
-import { useEffect, useState } from "react";
 import styles from "./Standings.module.scss";
-import data from "../../db/getBystandingsArg1.json";
+import { useGetDataStandings } from "../../hooks/useGetDataStandings";
 
 const columns = [
 	{
@@ -9,9 +8,9 @@ const columns = [
 		dataIndex: "rank",
 	},
 	{
-		title: "",
+		title: " ",
 		dataIndex: "logo",
-		render: (logo) => <img className={styles.logo} src={logo} alt="logo del club"></img>,
+		render: (logo) => <img className={styles.logo} src={logo} alt="logo del club" />,
 	},
 	{
 		title: "Club",
@@ -53,30 +52,7 @@ const columns = [
 ];
 
 const Standings = ({ dataLeague }) => {
-	const [id, setId] = useState(dataLeague.id);
-	const [season, setSeason] = useState(dataLeague.season);
-	const [dataStandings, setDataStandings] = useState(null);
-
-	useEffect(() => {
-		const newObj = data.response[0].league.standings[1].map((obj) => {
-			return {
-				key: obj.team.id,
-				rank: obj.rank,
-				logo: obj.team.logo,
-				name: obj.team.name,
-				points: obj.points,
-				played: obj.all.played,
-				win: obj.all.win,
-				draw: obj.all.draw,
-				lose: obj.all.lose,
-				gf: obj.all.goals.for,
-				ga: obj.all.goals.against,
-				goalsDiff: obj.goalsDiff,
-			};
-		});
-
-		setTimeout(setDataStandings(newObj), 2000);
-	}, [id, season]);
+	const { dataStandings } = useGetDataStandings({ dataLeague });
 	return (
 		<section className={styles.container}>
 			{dataStandings ? (
@@ -91,7 +67,7 @@ const Standings = ({ dataLeague }) => {
 					/>
 				</>
 			) : (
-				""
+				<h4 className={styles.notContent}>SIN CONTENIDO DISPONIBLE</h4>
 			)}
 		</section>
 	);

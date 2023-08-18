@@ -19,24 +19,38 @@
 		background: hsla(0, 0%, 100%, 0);
 		color: $font-color;
 	}
+
+	:global(.ant-table.ant-table-small .ant-table-thead) {
+		border-color: #333;
+		@media only screen and (max-width: 768px) {
+			font-size: 13px;
+		}
+		> tr > th:global(.ant-table-cell) {
+			text-align: center;
+			padding: 1px 1px;
+			background: hsla(0, 0%, 100%, 0);
+			border-color: #333;
+			color: $font-color;
+		}
+	}
 	:global(.ant-table.ant-table-small .ant-table-tbody) {
 		> tr > td:global(.ant-table-cell) {
 			text-align: center;
 			padding: 1px 1px;
 			background: none;
+			border-color: #333;
 		}
 	}
-	:global(.ant-table.ant-table-small .ant-table-thead) {
-		> tr > th:global(.ant-table-cell) {
-			text-align: center;
-			padding: 1px 1px;
-			background: hsla(0, 0%, 100%, 0);
-			color: $font-color;
-		}
-	}
-
 	.logo {
 		width: 24px;
 		height: 24px;
+	}
+	.notContent {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		color: $font-color;
+		font-size: 1.5rem;
+		text-align: center;
 	}
 }
