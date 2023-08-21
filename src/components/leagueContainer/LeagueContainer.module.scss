@@ -1,12 +1,11 @@
+@use "../../assets/sass/variables" as *;
 .title {
-  font-size: 2rem;
-  font-weight: 900;
-  box-shadow: 0 2px 8px #111010;
-  width: fit-content;
-  margin: auto;
-  padding: 0px 12px;
-  border-radius: 4px;
-  @media only screen and (max-width: 768px) {
-    font-size: 1.5rem;
-  }
+	font-size: $title-size;
+	font-weight: 900;
+	color: $title-color;
+	margin: 175px auto 75px auto;
+	@media only screen and (max-width: 768px) {
+		font-size: 2rem;
+		margin: 100px auto 25px auto;
+	}
 }
