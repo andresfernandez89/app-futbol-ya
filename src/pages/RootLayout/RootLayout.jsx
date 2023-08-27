@@ -7,6 +7,7 @@ import argentina from "../../db/getByCountryArgentina.json";
 import england from "../../db/getByCountryEngland.json";
 import App from "../../components/app/App";
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 import styles from "./RootLayout.module.scss";
 const { Content } = Layout;
 const { response: argLeague } = argentinaLeague;
@@ -27,7 +28,7 @@ const RootLayout = () => {
 			<Content className={styles.content}>
 				<App />
 			</Content>
-			<footer className={styles.footer}>© 2022 Copyright - futbolya.com</footer>
+			<Footer />
 		</div>
 	);
 };

@@ -1,0 +1,9 @@
+@use "../../assets/sass/variables" as *;
+.footer {
+	width: 100%;
+	text-align: center;
+	background-color: $bg-container-color;
+	padding: 20px 0;
+	border-top: $border-main;
+	margin-top: auto;
+}
